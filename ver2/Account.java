@@ -5,7 +5,11 @@ public class Account {
 	// New Comment for balance
 	private double balance;
 	private String name;
-	 
+	 // Constructor
+	public Account(double balance) {
+		this("Unknown", balance);
+	}
+
 
 	public Account(String name, double balance) {
 		this.name = name;
