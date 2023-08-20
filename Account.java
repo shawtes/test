@@ -1,21 +1,34 @@
-package ver1;
+package ver2;
 
 public class Account {
 	// Instance variable, only available inside this class.
+	// New Comment for balance
 	private double balance;
-	// Constructor
-	public Account(double initBalance) {
-		balance = initBalance;
+	private String name;
+	 
+
+	public Account(String name, double balance) {
+		this.name = name;
+		this.balance = balance;
 	}
+
+
 	@Override
 	public String toString() {
-		String msg = "balance=$" + balance;
+		String msg = "name=" + name + ", balance=$" + balance;
 		return msg;}
+	
 	// Decreases the balance by amount
 	public void withdraw(double amount) {
 		if(amount>0) {
 			balance -= amount;
-		}
+		}}
+		public void mergeAccount(Account a) {
+			if(this.getName().equals(a.getName())) {
+				this.balance += a.getBalance();
+			}
+
+		
 	}
 
 
@@ -25,6 +38,13 @@ public class Account {
 	public double getBalance() {
 		return balance;
 	}
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name; }
+
 	
 // A method that increases the balance by amount
 public void deposit(double amount) {
